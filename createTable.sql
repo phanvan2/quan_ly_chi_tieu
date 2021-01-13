@@ -1,16 +1,19 @@
-create table CHITIEUSV(
-HOTEN NVARCHAR(30),
-MASV CHAR(7) PRIMARY KEY,
-GT NVARCHAR(5),
-TRO INT,
-DIEN_NUOC INT,
-TIEN_AN INT,
-TIEN_DT INT,
-CHI_PHI_KHAC INT,
-GHI_CHU INT,
-)
-insert into CHITIEUSV(HOTEN,MASV,GT,TRO,DIEN_NUOC,TIEN_AN,TIEN_DT,CHI_PHI_KHAC,GHI_CHU) values
-(N'Phan Vãn Phùng','19IT011',N'Nam',500,60,600,40,800,NULL),
-(N'Ðoàn Hoàng Thao','19IT222',N'Nam',1000,50,400,20,0,NULL),
-(N'Ph?m Ngoc Anh','19IT333',N'N?',800,60,200,20,0,NULL),
-(N'Nuy?n Vãn Công ','18IT233',N'Nam',600,20,100,10,5,NULL)
+CREATE TABLE [dbo].[TIENCHI](
+	[Ma_chi] [int] IDENTITY(100,1) NOT NULL,
+	[Danh_muc] [nvarchar](50) NOT NULL,
+	[Tien_chi] [int] NOT NULL,
+	[Thoi_gian] [date] NOT NULL,
+	[Ghi_chu] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[TIENTHU](
+	[Ma_thu] [int] IDENTITY(100,1) NOT NULL,
+	[Danh_muc] [nvarchar](50) NOT NULL,
+	[Tien_thu] [int] NOT NULL,
+	[Thoi_gian] [date] NOT NULL,
+	[Ghi_chu] [nvarchar](50) NULL
+) ON [PRIMARY]
+GO
+
+
